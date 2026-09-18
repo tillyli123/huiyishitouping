@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0066cc">
+  <title>会议室投屏教程</title>
+  <style>
+    :root {
+      --primary: #0066cc;
+      --primary-dark: #0052a3;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --border: #e6ebf1;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+    body { padding: 24px 16px 64px; min-height: 100vh; }
+    .container { max-width: 720px; margin: 0 auto; }
+    header { text-align: center; padding: 24px 0 32px; }
+    header .icon {
+      width: 72px; height: 72px; margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--primary), #4a9eff);
+      border-radius: 18px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.25);
+    }
+    header .icon svg { width: 42px; height: 42px; fill: white; }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.5px; }
+    header p { color: var(--muted); font-size: 15px; }
+    .tip { background: #e8f3ff; border-left: 4px solid var(--primary); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-size: 14px; color: #1a4a80; }
+    .tip strong { color: var(--primary-dark); }
+    .card {
+      background: var(--card); border-radius: 16px; padding: 20px; margin-bottom: 20px;
+      box-shadow: var(--shadow); border: 1px solid var(--border);
+    }
+    .card h2 {
+      font-size: 18px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;
+    }
+    .badge {
+      display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500;
+      background: var(--primary); color: white;
+    }
+    .badge.wifi { background: #28a745; }
+    video {
+      width: 100%; height: auto; border-radius: 10px; background: #000; display: block;
+      aspect-ratio: 16 / 9;
+    }
+    .meta { display: flex; gap: 16px; margin-top: 12px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+    .meta span { display: inline-flex; align-items: center; gap: 4px; }
+    footer { text-align: center; margin-top: 32px; font-size: 12px; color: #999; }
+    @media (max-width: 480px) {
+      header h1 { font-size: 24px; }
+      .card { padding: 16px; }
+      body { padding: 16px 12px 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+      </div>
+      <h1>会议室投屏教程</h1>
+      <p>扫码即看 · 两种方式任选</p>
+    </header>
+
+    <div class="tip">
+      💡 <strong>提示:</strong>第一次打开需要等待视频加载,建议在 Wi-Fi 环境下观看。
+    </div>
+
+    <section class="card">
+      <h2><span class="badge wifi">推荐</span>会议室无线拍拍使用教程</h2>
+      <video controls preload="metadata" playsinline>
+        <source src="会议室无线拍拍使用教程.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+      </video>
+      <div class="meta">
+        <span>📶 无线投屏</span>
+        <span>📱 手机/电脑均可</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="badge">有线</span>会议室有线投屏使用教程</h2>
+      <video controls preload="metadata" playsinline>
+        <source src="会议室有线投屏使用教程.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+      </video>
+      <div class="meta">
+        <span>🔌 有线投屏</span>
+        <span>🖥️ 稳定不卡顿</span>
+      </div>
+    </section>
+
+    <footer>如有问题请联系行政同事</footer>
+  </div>
+</body>
+</html>
